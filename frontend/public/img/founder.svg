@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 550" role="img" aria-label="Illustration of a person meditating in front of a rising sun">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe0d8"/><stop offset="1" stop-color="#f2e6cc"/></linearGradient>
+  <radialGradient id="sun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fdeac2"/><stop offset="1" stop-color="#e9a23b"/></radialGradient>
+</defs>
+<rect width="440" height="550" fill="url(#sky)"/>
+<circle cx="220" cy="250" r="118" fill="url(#sun)"/>
+<g fill="none" stroke="#1f6560" stroke-opacity=".35" stroke-width="1.5"><circle cx="220" cy="250" r="150"/><circle cx="220" cy="250" r="185"/><circle cx="220" cy="250" r="222"/></g>
+<path d="M0 420c70-34 140-34 220 0s150 34 220 0V550H0z" fill="#1f6560" fill-opacity=".35"/>
+<path d="M0 455c80-30 150-30 220 0s150 30 220 0V550H0z" fill="#0b2827" fill-opacity=".88"/>
+<g fill="#0b2827">
+  <circle cx="220" cy="262" r="26"/>
+  <path d="M196 292h48c14 0 22 12 24 30l6 52H166l6-52c2-18 10-30 24-30z"/>
+  <path d="M120 400c26-26 62-30 100-14 38-16 74-12 100 14-30 24-70 30-100 18-30 12-70 6-100-18z"/>
+  <path d="M172 330c-22 26-44 44-60 62l22 8c22-12 40-30 58-50zM268 330c22 26 44 44 60 62l-22 8c-22-12-40-30-58-50z"/>
+</g>
+<circle cx="220" cy="262" r="26" fill="none"/>
+</svg>

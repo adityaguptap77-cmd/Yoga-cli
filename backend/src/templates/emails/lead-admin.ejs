@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<body style="margin:0;padding:0;background:#e4eae2;font-family:Arial,Helvetica,sans-serif;color:#10302f;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e4eae2;padding:24px 12px;">
+  <tr><td align="center">
+    <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;background:#f2f6f0;border-radius:18px;overflow:hidden;">
+      <tr><td style="background:#0b2827;padding:20px 28px;color:#f3f7f1;font-size:15px;">New website enquiry #<%= lead.id %></td></tr>
+      <tr><td style="padding:26px 28px;">
+        <h1 style="margin:0 0 16px;font-family:Georgia,serif;font-weight:normal;font-size:24px;"><%= lead.name %> wants to try <%= lead.interest %></h1>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #d1dacf;font-size:15px;">
+          <% [['Name', lead.name], ['Mobile', lead.phone], ['Email', lead.email], ['Class', lead.interest], ['Experience', lead.level], ['Format', lead.mode], ['Preferred time', lead.preferred_time], ['Message', lead.message || 'None'], ['Received', fmtDate(lead.created_at, true) + ' IST']].forEach(function (row) { %>
+          <tr><td style="padding:9px 0;border-bottom:1px solid #d1dacf;color:#3a5553;width:130px;vertical-align:top;"><%= row[0] %></td><td style="padding:9px 0;border-bottom:1px solid #d1dacf;font-weight:bold;"><%= row[1] %></td></tr>
+          <% }); %>
+        </table>
+        <p style="margin:22px 0 0;"><a href="<%= baseUrl %>/admin/leads" style="display:inline-block;background:#0b2827;color:#f3f7f1;text-decoration:none;font-weight:bold;padding:12px 22px;border-radius:999px;">Open in admin</a></p>
+        <p style="margin:14px 0 0;font-size:13px;color:#3a5553;">Reply to this email to write to <%= lead.name.split(' ')[0] %> directly.</p>
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>

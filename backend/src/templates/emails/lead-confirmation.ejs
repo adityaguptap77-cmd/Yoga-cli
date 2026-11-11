@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<body style="margin:0;padding:0;background:#e4eae2;font-family:Arial,Helvetica,sans-serif;color:#10302f;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e4eae2;padding:24px 12px;">
+  <tr><td align="center">
+    <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;background:#f2f6f0;border-radius:18px;overflow:hidden;">
+      <tr><td style="background:#0b2827;padding:22px 28px;color:#f3f7f1;font-family:Georgia,serif;font-size:22px;"><%= settings.site_name %></td></tr>
+      <tr><td style="padding:28px;">
+        <h1 style="margin:0 0 12px;font-family:Georgia,serif;font-weight:normal;font-size:26px;line-height:1.25;">Thank you, <%= lead.name.split(' ')[0] %>. We have your request.</h1>
+        <p style="margin:0 0 18px;font-size:16px;line-height:1.6;">A teacher will contact you on <strong><%= lead.phone %></strong> within one working day to fix your free trial class. Here is what you sent us:</p>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #d1dacf;font-size:15px;">
+          <% [['Class', lead.interest], ['Experience', lead.level], ['Format', lead.mode], ['Preferred time', lead.preferred_time], ['Message', lead.message || 'None']].forEach(function (row) { %>
+          <tr><td style="padding:10px 0;border-bottom:1px solid #d1dacf;color:#3a5553;width:130px;vertical-align:top;"><%= row[0] %></td><td style="padding:10px 0;border-bottom:1px solid #d1dacf;font-weight:bold;"><%= row[1] %></td></tr>
+          <% }); %>
+        </table>
+        <p style="margin:22px 0 8px;font-size:15px;line-height:1.6;">Need to change something? Just reply to this email<% if (settings.phone) { %> or call us on <%= settings.phone %><% } %>.</p>
+        <p style="margin:22px 0 0;"><a href="<%= baseUrl %>/services" style="display:inline-block;background:#e9a23b;color:#10302f;text-decoration:none;font-weight:bold;padding:12px 22px;border-radius:999px;">See our classes</a></p>
+      </td></tr>
+      <tr><td style="padding:18px 28px;background:#e4eae2;font-size:12px;line-height:1.5;color:#3a5553;">
+        You received this because you submitted the contact form at <%= baseUrl.replace(/^https?:\/\//, '') %>. Yoga is not a substitute for medical care; please speak to your doctor if you have a health condition.
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>

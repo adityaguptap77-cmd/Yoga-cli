@@ -1,0 +1,25 @@
+{
+  "name": "yovana-yoga",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Yovana Yoga monorepo: Express API (backend) and Next.js website + admin (frontend)",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently -k -n api,web -c cyan,magenta \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "start": "concurrently -k -n api,web -c cyan,magenta \"npm run start --prefix backend\" \"npm run start --prefix frontend\"",
+    "start:backend": "npm run start --prefix backend",
+    "start:frontend": "npm run start --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "typecheck": "npm run typecheck --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {}
+}
